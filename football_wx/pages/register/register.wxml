@@ -1,0 +1,9 @@
+<view class="header">足球圈 —— 注册</view>
+<form>
+  <view class="loginInfo">
+    <input type="text" placeholder="手机号" placeholder-style="color:#cacaca;"/>
+    <input type="text" placeholder="密码" placeholder-style="color:#cacaca;"/>
+    <input type="text" placeholder="昵称" placeholder-style="color:#cacaca;"/>
+  </view>
+  <button type="primary">提交</button>
+</form>

@@ -1,0 +1,30 @@
+.header{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  background: #0dc441;
+}
+.loginInfo{
+  margin:30rpx;
+}
+.loginInfo input{
+  height: 66rpx;
+  border-bottom: 2rpx solid #7f7f7f;
+  margin-bottom: 52rpx;
+}
+.font{
+  margin:0 30rpx;
+  font-size: 30rpx;
+}
+.font navigator{
+  display: inline-block;
+  text-decoration: underline;
+  color: #a3e9b7;
+}
+button{
+  margin:0 30rpx;
+  margin-top: 54rpx;
+}

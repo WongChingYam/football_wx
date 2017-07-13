@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<view class="index">
+   <view class="header">
+      <view class="hot {{currentSel==0 ? 'select' : ''}}" bindtap="changeSel" data-current="0">热点</view>
+      <view class="focus {{currentSel==1 ? 'select' : ''}}" bindtap="changeSel" data-current="1">关注</view>
+   </view>
+
+   <view class="sel1 {{currentSel==0 ? '' : 'notSelected'}}">
+    <view class="nav">
+        <view class="navBtn {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="changeNav">足球现场</view>
+        <view class="navBtn {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="changeNav">足球生活</view>
+        <view class="navBtn {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="changeNav">足球美女</view>
+    </view>
+
+    <swiper duration="1000" circular="true" current="{{currentTab}}" bindchange="changeContent" class="list">
+        <swiper-item class="content">
+          <block wx:for="{{list}}" wx:key="{{index}}">
+            <view class="box">
+              <view class="img" style="background:url('{{item.img}}') no-repeat;background-size:100%;"></view>
+            <view class="title">{{item.title}}</view>
+          </view>
+          </block>
+        </swiper-item>
+
+        <swiper-item class="content">
+          <block wx:for="{{list1}}" wx:key="{{index}}">
+            <view class="box">
+              <view class="img" style="background:url('{{item.img}}') no-repeat;background-size:100%;"></view>
+            <view class="title">{{item.title}}</view>
+          </view>
+          </block>
+        </swiper-item>
+
+        <swiper-item class="content">
+          <block wx:for="{{list}}" wx:key="{{index}}">
+            <view class="box">
+              <view class="img" style="background:url('{{item.img}}') no-repeat;background-size:100%;"></view>
+            <view class="title">{{item.title}}</view>
+          </view>
+          </block>
+        </swiper-item>
+    </swiper>
+   </view>
+
+   <view class="sel2 {{currentSel==1 ? '' : 'notSelected'}}">
+      <view class="info" wx:for="{{focusList}}" wx:key="{{index}}">
+        <view class="t">
+          <image src="{{item.img}}" mode="aspectFit"></image>
+          <view class="fontInfo">
+            <view class="name">{{item.name}}</view>
+            <view class="intro">{{item.info}}</view>
+          </view>
+          <view class="good">{{item.goodNum}}<image src="/imgs/good.png"></image></view>
+        </view>
+        <image src="{{item.articleImg}}" class="articleImg" mode="aspectFill"></image>
+        <view class="c">{{item.articleInfo}}</view>
+      </view>
+   </view>
+
+   <!--<view class="footer">
+      <navigator url="/pages/index/index">
+        <image src="../../imgs/home.png" mode="aspectFit"></image>
+      首页</navigator>
+      <navigator url="/pages/index/index">
+        <image src="../../imgs/search.png" mode="aspectFit"></image>发现</navigator>
+      <view class="camera">
+      <image src="../../imgs/ds.png" mode="aspectFit" class="circle"></image>
+        <image src="../../imgs/camera.png" mode="aspectFit"></image>
+      </view>
+      <navigator url="/pages/index/index">
+        <image src="../../imgs/me.png" mode="aspectFit"></image>我的</navigator>
+      <navigator url="/pages/index/index">
+        <image src="../../imgs/exit.png" mode="aspectFit"></image>退出</navigator>
+   </view>-->
+</view>
